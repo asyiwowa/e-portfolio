@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nurul Syahieda | Cybersecurity Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -19,57 +23,21 @@
 }
 
 body{
-    transition:0.4s;
     font-family:'Inter',sans-serif;
-    background:
-    linear-gradient(rgba(10,10,10,0.75),rgba(10,10,10,0.75)),
-    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    color:white;
+
+    transition:0.4s;
+
     overflow-x:hidden;
-}
-
-/* THEME TOGGLE */
-
-#theme-toggle{
-    position:fixed;
-    bottom:30px;
-    right:30px;
-
-    width:60px;
-    height:60px;
-
-    border:none;
-    border-radius:50%;
-
-    font-size:24px;
-
-    cursor:pointer;
-
-    background:rgba(255,255,255,0.55);
-
-    backdrop-filter:blur(18px);
-
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
-
-    z-index:9999;
-
-    transition:0.3s;
-}
-
-#theme-toggle:hover{
-    transform:scale(1.08);
 }
 
 /* LIGHT MODE */
 
 body.light-mode{
+
     background:
     linear-gradient(
-    rgba(255,255,255,0.86),
-    rgba(255,255,255,0.90)
+    rgba(255,255,255,0.84),
+    rgba(255,255,255,0.88)
     ),
 
     url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop');
@@ -84,6 +52,7 @@ body.light-mode{
 /* DARK MODE */
 
 body.dark-mode{
+
     background:
     linear-gradient(
     rgba(15,15,15,0.84),
@@ -98,6 +67,405 @@ body.dark-mode{
 
     color:#f5f5f5;
 }
+
+/* THEME TOGGLE */
+
+#theme-toggle{
+
+    position:fixed;
+
+    bottom:30px;
+    right:30px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    font-size:26px;
+
+    color:#2b2b2b;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,0.60);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+
+    z-index:9999;
+
+    transition:0.3s;
+}
+
+#theme-toggle:hover{
+    transform:scale(1.08);
+}
+
+/* NAVIGATION */
+
+nav{
+    width:100%;
+
+    padding:24px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,0.40);
+
+    border-bottom:1px solid rgba(255,255,255,0.45);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+
+    color:#6d4c52;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:#444;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#b76e79;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:130px 8% 80px;
+}
+
+.hero-container{
+    width:100%;
+    max-width:1300px;
+
+    display:grid;
+    grid-template-columns:1fr 380px;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:78px;
+    line-height:1.1;
+
+    color:#3b2c30;
+}
+
+.hero-text span{
+    color:#b76e79;
+}
+
+.hero-text p{
+    margin-top:30px;
+
+    line-height:2;
+
+    color:#555;
+
+    font-size:18px;
+
+    max-width:720px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    margin-top:45px;
+
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    padding:17px 34px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#b76e79;
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    background:rgba(255,255,255,0.45);
+
+    color:#444;
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.5);
+}
+
+/* PROFILE CARD */
+
+.profile-card{
+    background:rgba(255,255,255,0.38);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.5);
+
+    border-radius:32px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.07);
+}
+
+.profile-card img{
+    width:230px;
+    height:230px;
+
+    border-radius:28px;
+
+    object-fit:cover;
+
+    margin-bottom:28px;
+}
+
+.profile-card h3{
+    margin-bottom:12px;
+
+    color:#3b2c30;
+}
+
+.profile-card p{
+    line-height:1.9;
+
+    color:#666;
+}
+
+/* SECTION */
+
+section{
+    padding:120px 8%;
+}
+
+/* TITLE */
+
+.section-title{
+    font-size:50px;
+
+    color:#5b3c42;
+
+    margin-bottom:60px;
+}
+
+/* GLASS BOX */
+
+.glass-box{
+    background:rgba(255,255,255,0.38);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.5);
+
+    border-radius:35px;
+
+    padding:55px;
+
+    margin-top:40px;
+    margin-bottom:50px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.glass-box p{
+    line-height:2.1;
+
+    color:#555;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:40px;
+
+    margin-top:35px;
+}
+
+/* CARD */
+
+.card{
+    background:rgba(255,255,255,0.38);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.45);
+
+    border-radius:30px;
+
+    padding:42px;
+
+    transition:0.3s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    color:#b76e79;
+
+    margin-bottom:18px;
+}
+
+.card p,
+.card li{
+    color:#555;
+
+    line-height:2;
+}
+
+/* SKILLS */
+
+.skill{
+    margin-bottom:30px;
+}
+
+.skill p{
+    margin-bottom:12px;
+
+    font-weight:600;
+}
+
+.bar{
+    width:100%;
+    height:13px;
+
+    background:#ead7da;
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+
+    background:#b76e79;
+
+    border-radius:50px;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:45px;
+}
+
+th,td{
+    padding:22px;
+
+    text-align:left;
+
+    border-bottom:1px solid #ddd;
+}
+
+th{
+    color:#b76e79;
+}
+
+/* TIMELINE */
+
+.timeline-item{
+    background:rgba(255,255,255,0.38);
+
+    backdrop-filter:blur(18px);
+
+    border-left:6px solid #b76e79;
+
+    border-radius:0 24px 24px 0;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.timeline-item h3{
+    color:#5b3c42;
+
+    margin-bottom:12px;
+}
+
+.timeline-item p{
+    color:#555;
+
+    line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+
+    padding:45px;
+
+    color:#666;
+}
+
+/* DARK MODE STYLING */
 
 body.dark-mode nav,
 body.dark-mode .glass-box,
@@ -129,268 +497,6 @@ body.dark-mode .btn-secondary{
     color:white;
 }
 
-/* NAVIGATION */
-
-nav{
-    width:100%;
-    padding:25px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    z-index:1000;
-    backdrop-filter:blur(18px);
-    background:rgba(255,255,255,0.05);
-    border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.logo{
-    font-size:22px;
-    font-weight:700;
-    letter-spacing:1px;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
-}
-
-nav a{
-    text-decoration:none;
-    color:white;
-    font-size:15px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#f6c4d0;
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:120px 8% 80px;
-}
-
-.hero-container{
-    width:100%;
-    max-width:1300px;
-    display:grid;
-    grid-template-columns:1fr 400px;
-    gap:50px;
-    align-items:center;
-}
-
-.hero-text h1{
-    font-size:75px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero-text span{
-    color:#f6c4d0;
-}
-
-.hero-text p{
-    color:#d6d6d6;
-    font-size:18px;
-    line-height:1.9;
-    max-width:700px;
-}
-
-.hero-buttons{
-    margin-top:40px;
-    display:flex;
-    gap:20px;
-}
-
-.btn{
-    padding:16px 32px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:#f6c4d0;
-    color:black;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-secondary{
-    border:1px solid rgba(255,255,255,0.2);
-    color:white;
-    backdrop-filter:blur(12px);
-}
-
-.btn-secondary:hover{
-    background:rgba(255,255,255,0.08);
-}
-
-.profile-card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:30px;
-    padding:35px;
-    text-align:center;
-}
-
-.profile-card img{
-    width:220px;
-    height:220px;
-    border-radius:25px;
-    object-fit:cover;
-    margin-bottom:25px;
-}
-
-.profile-card h3{
-    margin-bottom:10px;
-}
-
-.profile-card p{
-    color:#d6d6d6;
-    line-height:1.7;
-}
-
-/* SECTIONS */
-
-section{
-    padding:100px 8%;
-}
-
-.section-title{
-    font-size:50px;
-    margin-bottom:50px;
-}
-
-.glass-box{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:30px;
-    padding:45px;
-    backdrop-filter:blur(18px);
-    margin-bottom:30px;
-}
-
-.glass-box p{
-    color:#dddddd;
-    line-height:2;
-}
-
-/* GRID */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:25px;
-    padding:35px;
-    backdrop-filter:blur(15px);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    background:rgba(255,255,255,0.08);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#f6c4d0;
-}
-
-.card p,
-.card li{
-    color:#d6d6d6;
-    line-height:1.9;
-}
-
-/* SKILLS */
-
-.skill{
-    margin-bottom:25px;
-}
-
-.skill p{
-    margin-bottom:10px;
-}
-
-.bar{
-    width:100%;
-    height:12px;
-    background:rgba(255,255,255,0.08);
-    border-radius:50px;
-    overflow:hidden;
-}
-
-.fill{
-    height:100%;
-    background:#f6c4d0;
-    border-radius:50px;
-}
-
-/* TIMELINE */
-
-.timeline-item{
-    padding:30px;
-    border-left:3px solid #f6c4d0;
-    margin-bottom:25px;
-    background:rgba(255,255,255,0.04);
-    border-radius:0 20px 20px 0;
-}
-
-.timeline-item h3{
-    color:#f6c4d0;
-    margin-bottom:10px;
-}
-
-.timeline-item p{
-    color:#d6d6d6;
-    line-height:1.8;
-}
-
-/* TABLE */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:30px;
-}
-
-th,td{
-    padding:20px;
-    text-align:left;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-th{
-    color:#f6c4d0;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:40px;
-    color:#d6d6d6;
-}
-
 /* MOBILE */
 
 @media(max-width:900px){
@@ -400,47 +506,71 @@ footer{
 }
 
 .hero-text h1{
-    font-size:50px;
+    font-size:52px;
 }
 
 nav{
     flex-direction:column;
-    gap:20px;
+
+    gap:18px;
 }
 
 nav ul{
-    gap:18px;
     flex-wrap:wrap;
+
     justify-content:center;
+
+    gap:20px;
 }
 
 .section-title{
     font-size:38px;
 }
 
+.glass-box,
+.card{
+    padding:32px;
+}
+
 }
 
 </style>
+
 </head>
-<body>
+
+<body class="light-mode">
+
+<!-- TOGGLE -->
 
 <button id="theme-toggle">
-🌙
+☾
 </button>
+
+<!-- NAVBAR -->
 
 <nav>
 
-<div class="logo">NS.</div>
+<div class="logo">
+NS.
+</div>
 
 <ul>
+
 <li><a href="#career">Career</a></li>
+
 <li><a href="#skills">Skills</a></li>
+
 <li><a href="#plan">Development</a></li>
+
 <li><a href="#evidence">Evidence</a></li>
+
 <li><a href="#reflection">Reflection</a></li>
+
 </ul>
 
 </nav>
+
+<!-- HERO -->
 
 <div class="hero">
 
@@ -449,31 +579,47 @@ nav ul{
 <div class="hero-text">
 
 <h1>
-Future <span>Cybersecurity</span><br>
-Professional
+Nurul <span>Syahieda</span>
 </h1>
 
 <p>
-I am Nurul Syahieda, a Computer Science student with strong interest in cybersecurity, networking, IoT technologies, and system protection. This e-portfolio presents my career goals, technical skills, learning progress, and future development plan in network security and related IT fields.
+Computer Science undergraduate specializing in Internet Computing
+with strong foundation in system analysis,
+web development,
+database management,
+and IoT-based systems.
+
+Passionate about cybersecurity,
+networking,
+and secure system development.
 </p>
 
 <div class="hero-buttons">
-<a href="#career" class="btn btn-primary">Explore Portfolio</a>
-<a href="#reflection" class="btn btn-secondary">Personal Reflection</a>
+
+<a href="#career" class="btn btn-primary">
+Explore Portfolio
+</a>
+
+<a href="#reflection" class="btn btn-secondary">
+Personal Reflection
+</a>
+
 </div>
 
 </div>
 
 <div class="profile-card">
 
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+<img src="asyi.jpg">
 
-<h3>Nurul Syahieda</h3>
+<h3>
+Cybersecurity & System Analysis
+</h3>
 
 <p>
 Computer Science Student<br>
 Future SOC Analyst<br>
-Cybersecurity & IoT Enthusiast
+IoT & Secure Systems Enthusiast
 </p>
 
 </div>
@@ -482,20 +628,35 @@ Cybersecurity & IoT Enthusiast
 
 </div>
 
+<!-- CAREER -->
+
 <section id="career">
 
-<h2 class="section-title">Career Exploration</h2>
+<h2 class="section-title">
+Career Exploration
+</h2>
 
 <div class="glass-box">
 
 <p>
-I am interested in becoming a Security Operations Center (SOC) Analyst. A SOC Analyst is responsible for monitoring network activities, detecting cyber threats, investigating suspicious behavior, and responding to cybersecurity incidents.
+I am interested in pursuing a career as a Security Operations Center (SOC) Analyst.
+A SOC Analyst is responsible for monitoring network activities,
+detecting cyber threats,
+investigating suspicious activities,
+and responding to cybersecurity incidents.
 </p>
 
 <br>
 
 <p>
-This role is highly relevant in modern cybersecurity because organizations today face increasing cyber threats such as ransomware, phishing attacks, malware, and data breaches. SOC Analysts help organizations maintain system security, protect sensitive information, and minimize cybersecurity risks.
+This role is highly relevant in modern cybersecurity because organizations today face increasing cyber threats such as ransomware,
+phishing attacks,
+malware,
+and data breaches.
+
+SOC Analysts help organizations maintain system security,
+protect sensitive information,
+and reduce cybersecurity risks.
 </p>
 
 </div>
@@ -503,85 +664,135 @@ This role is highly relevant in modern cybersecurity because organizations today
 <div class="grid">
 
 <div class="card">
-<h3>Responsibilities</h3>
+
+<h3>
+Responsibilities
+</h3>
+
 <p>
-Monitor security alerts, investigate suspicious network activities, and respond to incidents.
+Monitor security alerts,
+analyze suspicious network activities,
+and respond to incidents.
 </p>
+
 </div>
 
 <div class="card">
-<h3>Required Skills</h3>
+
+<h3>
+Required Skills
+</h3>
+
 <p>
-Networking, Linux administration, cybersecurity awareness, analytical thinking, and security monitoring.
+Networking,
+Linux administration,
+analytical thinking,
+security monitoring,
+and cybersecurity awareness.
 </p>
+
 </div>
 
 <div class="card">
-<h3>Tools</h3>
+
+<h3>
+Security Tools
+</h3>
+
 <p>
-Wireshark, SIEM platforms, Kali Linux, Python scripting, and monitoring tools.
+Wireshark,
+Kali Linux,
+SIEM platforms,
+Python scripting,
+and monitoring tools.
 </p>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- SKILLS -->
+
 <section id="skills">
 
-<h2 class="section-title">Skills Assessment</h2>
+<h2 class="section-title">
+Skills Assessment
+</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Technical Skills</h3>
+
+<h3>
+Technical Skills
+</h3>
+
 <ul>
+
+<li>PHP</li>
+<li>JavaScript</li>
+<li>Python</li>
 <li>HTML & CSS</li>
-<li>Python Programming</li>
-<li>ESP32 IoT Development</li>
-<li>Networking Basics</li>
-<li>Linux Basics</li>
+<li>Laravel 9</li>
+<li>Flutter</li>
+<li>MySQL</li>
+<li>Linux</li>
+<li>Penetration Testing Basics</li>
+
 </ul>
+
 </div>
 
 <div class="card">
-<h3>Soft Skills</h3>
+
+<h3>
+Soft Skills
+</h3>
+
 <ul>
+
 <li>Communication</li>
-<li>Teamwork</li>
 <li>Leadership</li>
+<li>Teamwork</li>
 <li>Problem Solving</li>
 <li>Adaptability</li>
+
 </ul>
+
 </div>
 
 </div>
 
 <div class="glass-box">
 
-<h3 style="margin-bottom:30px; color:#f6c4d0;">Skill Progress</h3>
+<h3 style="margin-bottom:35px; color:#b76e79;">
+Skill Progress
+</h3>
 
 <div class="skill">
 <p>HTML & CSS</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
 </div>
 
 <div class="skill">
-<p>Python Programming</p>
-<div class="bar"><div class="fill" style="width:65%"></div></div>
+<p>Python</p>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
 </div>
 
 <div class="skill">
 <p>Networking</p>
-<div class="bar"><div class="fill" style="width:60%"></div></div>
+<div class="bar"><div class="fill" style="width:65%"></div></div>
 </div>
 
 <div class="skill">
 <p>Linux</p>
-<div class="bar"><div class="fill" style="width:45%"></div></div>
+<div class="bar"><div class="fill" style="width:50%"></div></div>
 </div>
 
 <table>
+
 <tr>
 <th>Industry Requirement</th>
 <th>Current Level</th>
@@ -591,13 +802,13 @@ Wireshark, SIEM platforms, Kali Linux, Python scripting, and monitoring tools.
 <tr>
 <td>Linux Administration</td>
 <td>Beginner</td>
-<td>Need more hands-on experience</td>
+<td>Need more practical experience</td>
 </tr>
 
 <tr>
 <td>Cybersecurity Tools</td>
 <td>Basic</td>
-<td>Learn Wireshark & Kali Linux</td>
+<td>Learn advanced monitoring tools</td>
 </tr>
 
 <tr>
@@ -612,111 +823,187 @@ Wireshark, SIEM platforms, Kali Linux, Python scripting, and monitoring tools.
 
 </section>
 
+<!-- DEVELOPMENT -->
+
 <section id="plan">
 
-<h2 class="section-title">Career Development Plan</h2>
+<h2 class="section-title">
+Career Development Plan
+</h2>
 
 <div class="timeline-item">
-<h3>2026</h3>
+
+<h3>
+2026
+</h3>
+
 <p>
-Improve networking knowledge and Linux administration skills.
+Improve Linux administration,
+networking knowledge,
+and cybersecurity fundamentals.
 </p>
+
 </div>
 
 <div class="timeline-item">
-<h3>2027</h3>
+
+<h3>
+2027
+</h3>
+
 <p>
-Learn cybersecurity tools such as Wireshark and Kali Linux.
+Learn Wireshark,
+Kali Linux,
+and improve Python scripting skills.
 </p>
+
 </div>
 
 <div class="timeline-item">
-<h3>2028</h3>
+
+<h3>
+2028
+</h3>
+
 <p>
-Complete CCNA certification and improve Python scripting.
+Complete CCNA certification
+and strengthen cybersecurity technical skills.
 </p>
+
 </div>
 
 <div class="timeline-item">
-<h3>2030</h3>
+
+<h3>
+2030
+</h3>
+
 <p>
-Become a professional SOC Analyst in the cybersecurity industry.
+Become a professional SOC Analyst
+in a cybersecurity-focused organization.
 </p>
+
 </div>
 
 </section>
 
+<!-- EVIDENCE -->
+
 <section id="evidence">
 
-<h2 class="section-title">Evidence of Learning</h2>
+<h2 class="section-title">
+Evidence of Learning
+</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>IoT Project</h3>
+
+<h3>
+NiagaTrack System
+</h3>
+
 <p>
-Smart Temperature Monitor using ESP32 and Blynk platform.
+Developed a web-based food ordering system
+with structured database integration and workflow optimization.
 </p>
+
 </div>
 
 <div class="card">
-<h3>Programming Experience</h3>
+
+<h3>
+Smart Temperature Monitoring
+</h3>
+
 <p>
-Hands-on experience in HTML, CSS, Python, and web development.
+Built an IoT-based monitoring system using ESP32
+with real-time alert functionality and Blynk integration.
 </p>
+
 </div>
 
 <div class="card">
-<h3>Cybersecurity Learning</h3>
+
+<h3>
+Asyiteru Smart Hotpot System
+</h3>
+
 <p>
-Exposure to networking, Linux environments, and cybersecurity concepts.
+Designed an integrated ordering,
+queue,
+and monitoring system to improve restaurant operational efficiency.
 </p>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- REFLECTION -->
+
 <section id="reflection">
 
-<h2 class="section-title">Personal Reflection</h2>
+<h2 class="section-title">
+Personal Reflection
+</h2>
 
 <div class="glass-box">
 
 <p>
-My dream company is Cisco because it is one of the leading companies in networking and cybersecurity technologies. I want to work in an environment that encourages innovation, continuous learning, and professional growth.
+My dream company is Cisco because it is one of the leading companies
+in networking and cybersecurity technologies.
+
+I want to work in an environment that encourages innovation,
+continuous learning,
+and professional growth.
 </p>
 
 <br>
 
 <p>
-I believe I can contribute through my willingness to learn, adaptability, teamwork abilities, and technical background in networking and IoT projects.
+I believe I can contribute through my willingness to learn,
+adaptability,
+teamwork abilities,
+and technical background in networking,
+IoT systems,
+and system development projects.
 </p>
 
 <br>
 
 <p>
-My strengths include responsibility, commitment, and eagerness to improve my skills continuously. One of my weaknesses is that I sometimes feel nervous during presentations, but I continuously work on improving my communication and confidence through academic activities.
+My strengths include responsibility,
+commitment,
+leadership experience,
+and eagerness to improve my technical skills continuously.
+
+One of my weaknesses is that I sometimes feel nervous during presentations,
+but I continuously improve my communication skills through academic activities and leadership roles.
 </p>
 
 </div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
 <p>
-Nurul Syahieda • Cybersecurity E-Portfolio
+Nurul Syahieda • Cybersecurity Portfolio
 </p>
 
 </footer>
 
+<!-- SCRIPT -->
+
 <script>
 
 const toggle = document.getElementById('theme-toggle');
-const body = document.body;
 
-body.classList.add('light-mode');
+const body = document.body;
 
 let darkMode = false;
 
@@ -725,15 +1012,21 @@ toggle.addEventListener('click', () => {
     darkMode = !darkMode;
 
     if(darkMode){
+
         body.classList.remove('light-mode');
+
         body.classList.add('dark-mode');
-        toggle.innerHTML = '☀️';
+
+        toggle.innerHTML = '☼';
     }
 
     else{
+
         body.classList.remove('dark-mode');
+
         body.classList.add('light-mode');
-        toggle.innerHTML = '🌙';
+
+        toggle.innerHTML = '☾';
     }
 
 });
