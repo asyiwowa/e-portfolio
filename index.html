@@ -5,54 +5,199 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asyi E-Portfolio</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-body{
+*{
     margin:0;
-    font-family: Arial, sans-serif;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
     background:#fffaf7;
     color:#222;
+    overflow-x:hidden;
 }
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#fff0ea;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#f3a6b6;
+    border-radius:20px;
+}
+
+/* HEADER */
 
 header{
-    background:#f8d7da;
-    color:#222;
+    min-height:100vh;
+    background:linear-gradient(to bottom right,#ffd6de,#fff0ea,#ffffff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:60px 20px;
+    padding:40px;
 }
 
-header h1{
-    font-size:50px;
-    margin-bottom:10px;
+.hero{
+    max-width:800px;
 }
 
-header p{
-    font-size:20px;
+.hero img{
+    width:190px;
+    height:190px;
+    object-fit:cover;
+    border-radius:50%;
+    border:7px solid white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
+
+.hero h1{
+    font-size:65px;
+    margin-top:25px;
+    color:#222;
+}
+
+.hero h2{
+    color:#d67c91;
+    margin-top:10px;
+    font-size:30px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+}
+
+/* NAVIGATION */
 
 nav{
-    background:#222;
-    padding:15px;
+    background:#1d1d1d;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:18px;
     text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
-    font-weight:bold;
+    margin:18px;
+    font-weight:600;
+    transition:0.3s;
 }
+
+nav a:hover{
+    color:#ffb6c1;
+}
+
+/* SECTION */
 
 section{
+    margin:50px auto;
+    width:90%;
+    max-width:1200px;
     background:white;
-    margin:30px;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-radius:30px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-h2{
-    color:#d48a9b;
+section:hover{
+    transform:translateY(-5px);
+}
+
+.section-title{
+    font-size:40px;
+    color:#d67c91;
+    margin-bottom:25px;
+}
+
+p{
+    line-height:1.9;
+    color:#444;
+    margin-bottom:15px;
+}
+
+/* CARDS */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+    background:#fff6f8;
+    padding:30px;
+    border-radius:25px;
+    transition:0.3s;
+    border:1px solid #ffe0e7;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#d67c91;
+    margin-bottom:15px;
+}
+
+/* SKILL BARS */
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill p{
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+progress{
+    width:100%;
+    height:20px;
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+progress::-webkit-progress-bar{
+    background:#ffe5eb;
+    border-radius:20px;
+}
+
+progress::-webkit-progress-value{
+    background:#f3a6b6;
+    border-radius:20px;
+}
+
+/* TABLE */
+
+.table-container{
+    overflow-x:auto;
+    margin-top:30px;
 }
 
 table{
@@ -60,34 +205,124 @@ table{
     border-collapse:collapse;
 }
 
-table, th, td{
-    border:1px solid #ccc;
+th{
+    background:#ffdce3;
+    color:#222;
 }
 
-th, td{
-    padding:12px;
+th,td{
+    padding:18px;
+    border:1px solid #eee;
+    text-align:left;
 }
 
-img{
+tr:nth-child(even){
+    background:#fff8fa;
+}
+
+/* TIMELINE */
+
+.timeline{
+    margin-top:30px;
+}
+
+.timeline-item{
+    background:#fff6f8;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:8px solid #f3a6b6;
     border-radius:15px;
-    margin-top:15px;
 }
+
+.timeline-item h3{
+    color:#d67c91;
+    margin-bottom:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* REFLECTION BOX */
+
+.reflection-box{
+    background:#fff6f8;
+    padding:35px;
+    border-radius:25px;
+    margin-top:25px;
+}
+
+/* FOOTER */
 
 footer{
-    background:#222;
+    background:#1d1d1d;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+section{
+    padding:30px;
+}
+
+.section-title{
+    font-size:30px;
+}
+
+nav a{
+    display:inline-block;
+    margin:10px;
+}
+
 }
 
 </style>
-
 </head>
 <body>
 
 <header>
-    <h1>Nurul Syahieda</h1>
-    <p>Cybersecurity & Network Security E-Portfolio</p>
+
+<div class="hero">
+
+<img src="https://i.pinimg.com/736x/87/eb/73/87eb73ef4f14b5e4e5bcd6c57d93d6f.jpg">
+
+<h1>Nurul Syahieda</h1>
+
+<h2>Cybersecurity & Network Security E-Portfolio</h2>
+
+<p>
+Computer Science student with strong interest in cybersecurity,
+networking, IoT technologies, and system protection.
+This portfolio presents my career goals, technical skills,
+learning progress, and future career development plan.
+</p>
+
+</div>
+
 </header>
 
 <nav>
@@ -99,118 +334,266 @@ footer{
 </nav>
 
 <section id="career">
-    <h2>Career Exploration</h2>
 
-    <p>
-    I am interested in becoming a SOC Analyst.
-    A SOC Analyst monitors network activities,
-    detects cyber threats, and responds to security incidents.
-    </p>
+<h2 class="section-title">🔐 Career Exploration</h2>
 
-    <p>
-    This role is important because cyberattacks are increasing
-    and organizations need professionals to protect their systems and data.
-    </p>
+<p>
+I am interested in becoming a Security Operations Center (SOC) Analyst.
+A SOC Analyst is responsible for monitoring network traffic,
+detecting cyber threats, investigating security alerts,
+and responding to cybersecurity incidents.
+</p>
+
+<p>
+This role is important because cyberattacks such as phishing,
+ransomware, and data breaches are increasing rapidly.
+Organizations need skilled professionals to protect their systems,
+networks, and sensitive information.
+</p>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Responsibilities</h3>
+<p>
+Monitor security alerts, analyze suspicious activities,
+and respond to incidents.
+</p>
+</div>
+
+<div class="card">
+<h3>Required Skills</h3>
+<p>
+Networking knowledge, Linux administration,
+security tools, and analytical thinking.
+</p>
+</div>
+
+<div class="card">
+<h3>Tools Used</h3>
+<p>
+Wireshark, SIEM platforms,
+Kali Linux, and cybersecurity monitoring tools.
+</p>
+</div>
+
+</div>
 
 </section>
 
 <section id="skills">
 
-    <h2>Skills Assessment</h2>
+<h2 class="section-title">💻 Skills Assessment</h2>
 
-    <h3>Technical Skills</h3>
+<p>
+I currently have basic to intermediate technical skills
+related to programming, networking, and IoT development.
+I also continue improving my communication and teamwork abilities.
+</p>
 
-    <ul>
-        <li>HTML & CSS</li>
-        <li>Python Programming</li>
-        <li>ESP32 IoT Development</li>
-        <li>Networking Basics</li>
-        <li>Linux Basics</li>
-    </ul>
+<div class="card-container">
 
-    <h3>Soft Skills</h3>
+<div class="card">
+<h3>Technical Skills</h3>
+<ul>
+<li>HTML & CSS</li>
+<li>Python Programming</li>
+<li>ESP32 IoT Development</li>
+<li>Networking Basics</li>
+<li>Linux Basics</li>
+</ul>
+</div>
 
-    <ul>
-        <li>Communication</li>
-        <li>Teamwork</li>
-        <li>Leadership</li>
-        <li>Problem Solving</li>
-    </ul>
+<div class="card">
+<h3>Soft Skills</h3>
+<ul>
+<li>Communication</li>
+<li>Leadership</li>
+<li>Teamwork</li>
+<li>Problem Solving</li>
+<li>Adaptability</li>
+</ul>
+</div>
 
-    <h3>Skills Comparison</h3>
+</div>
 
-    <table>
+<h3 style="margin-top:40px; color:#d67c91;">Skill Progress</h3>
 
-        <tr>
-            <th>Industry Requirement</th>
-            <th>Current Level</th>
-            <th>Improvement Needed</th>
-        </tr>
+<div class="skill">
+<p>HTML & CSS</p>
+<progress value="80" max="100"></progress>
+</div>
 
-        <tr>
-            <td>Linux Administration</td>
-            <td>Beginner</td>
-            <td>Need more practice</td>
-        </tr>
+<div class="skill">
+<p>Python Programming</p>
+<progress value="65" max="100"></progress>
+</div>
 
-        <tr>
-            <td>Cybersecurity Tools</td>
-            <td>Basic</td>
-            <td>Learn Wireshark & Kali Linux</td>
-        </tr>
+<div class="skill">
+<p>Networking</p>
+<progress value="60" max="100"></progress>
+</div>
 
-    </table>
+<div class="skill">
+<p>Linux</p>
+<progress value="45" max="100"></progress>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Industry Requirement</th>
+<th>Current Level</th>
+<th>Improvement Needed</th>
+</tr>
+
+<tr>
+<td>Linux Administration</td>
+<td>Beginner</td>
+<td>Need more practical experience</td>
+</tr>
+
+<tr>
+<td>Cybersecurity Tools</td>
+<td>Basic</td>
+<td>Learn Wireshark & Kali Linux</td>
+</tr>
+
+<tr>
+<td>Programming Skills</td>
+<td>Intermediate</td>
+<td>Improve automation scripting</td>
+</tr>
+
+</table>
+
+</div>
 
 </section>
 
 <section id="plan">
 
-    <h2>Career Development Plan</h2>
+<h2 class="section-title">📈 Career Development Plan</h2>
 
-    <ul>
-        <li>2026 - Improve networking and Linux skills</li>
-        <li>2027 - Learn cybersecurity tools</li>
-        <li>2028 - Complete CCNA certification</li>
-        <li>2030 - Become a SOC Analyst</li>
-    </ul>
+<p>
+To achieve my future career goals,
+I plan to continuously improve my technical knowledge,
+complete certifications, and gain hands-on experience.
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>2026</h3>
+<p>
+Improve networking and Linux administration skills.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>2027</h3>
+<p>
+Learn cybersecurity tools such as Wireshark and Kali Linux.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>2028</h3>
+<p>
+Complete CCNA certification and improve Python scripting skills.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>2030</h3>
+<p>
+Work professionally as a SOC Analyst in a cybersecurity company.
+</p>
+</div>
+
+</div>
 
 </section>
 
 <section id="evidence">
 
-    <h2>Evidence of Learning</h2>
+<h2 class="section-title">📂 Evidence of Learning</h2>
 
-    <p>
-    Smart Temperature Monitor project using ESP32 and Blynk platform.
-    This project improved my IoT and networking skills.
-    </p>
+<p>
+The following evidence demonstrates my learning progress,
+technical experience, and involvement in projects related to IT and networking.
+</p>
+
+<div class="gallery">
+
+<div>
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+<p style="margin-top:15px;">
+Smart Temperature Monitor project using ESP32 and Blynk platform.
+</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop">
+<p style="margin-top:15px;">
+Programming and web development learning activities.
+</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop">
+<p style="margin-top:15px;">
+Hands-on learning related to networking and cybersecurity.
+</p>
+</div>
+
+</div>
 
 </section>
 
 <section id="reflection">
 
-    <h2>Personal Reflection</h2>
+<h2 class="section-title">✨ Personal Reflection</h2>
 
-    <p>
-    My dream company is Cisco because it is one of the leading companies
-    in networking and cybersecurity technologies.
-    </p>
+<div class="reflection-box">
 
-    <p>
-    I believe I can contribute through my willingness to learn,
-    teamwork skills, and technical background.
-    </p>
+<p>
+My dream company is Cisco because it is one of the leading companies
+in networking and cybersecurity technologies.
+I want to work at Cisco to gain industry experience,
+improve my technical skills,
+and contribute to cybersecurity innovation.
+</p>
 
-    <p>
-    My strength is adaptability and responsibility.
-    My weakness is sometimes lacking confidence during presentations,
-    but I am improving my communication skills continuously.
-    </p>
+<p>
+I believe I can contribute through my willingness to learn,
+responsibility, teamwork abilities,
+and technical background in networking and IoT projects.
+</p>
+
+<p>
+My strength is adaptability and commitment when completing tasks.
+I am also eager to learn new technologies and continuously improve myself.
+</p>
+
+<p>
+One of my weaknesses is that I sometimes feel nervous during presentations.
+However, I continuously practice my communication skills
+through academic presentations and teamwork activities.
+</p>
+
+</div>
 
 </section>
 
 <footer>
-    <p>Created by Nurul Syahieda</p>
+
+<p>
+Created by Nurul Syahieda | Cybersecurity E-Portfolio
+</p>
+
 </footer>
 
 </body>
