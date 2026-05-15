@@ -24,9 +24,7 @@
 
 body{
     font-family:'Inter',sans-serif;
-
     transition:0.4s;
-
     overflow-x:hidden;
 }
 
@@ -152,8 +150,15 @@ nav a{
     transition:0.3s;
 }
 
-nav a:hover{
+/* LIGHT MODE HOVER */
+body.light-mode nav a:hover{
     color:#b76e79;
+}
+
+/* DARK MODE HOVER */
+body.dark-mode nav a:hover{
+    color:#ff8fb1;
+    text-shadow:0 0 10px rgba(255,143,177,0.8);
 }
 
 /* HERO */
@@ -274,13 +279,11 @@ nav a:hover{
 
 .profile-card h3{
     margin-bottom:12px;
-
     color:#3b2c30;
 }
 
 .profile-card p{
     line-height:1.9;
-
     color:#666;
 }
 
@@ -294,9 +297,7 @@ section{
 
 .section-title{
     font-size:50px;
-
     color:#5b3c42;
-
     margin-bottom:60px;
 }
 
@@ -321,7 +322,6 @@ section{
 
 .glass-box p{
     line-height:2.1;
-
     color:#555;
 }
 
@@ -361,108 +361,13 @@ section{
 
 .card h3{
     color:#b76e79;
-
     margin-bottom:18px;
 }
 
 .card p,
 .card li{
     color:#555;
-
     line-height:2;
-}
-
-/* SKILLS */
-
-.skill{
-    margin-bottom:30px;
-}
-
-.skill p{
-    margin-bottom:12px;
-
-    font-weight:600;
-}
-
-.bar{
-    width:100%;
-    height:13px;
-
-    background:#ead7da;
-
-    border-radius:50px;
-
-    overflow:hidden;
-}
-
-.fill{
-    height:100%;
-
-    background:#b76e79;
-
-    border-radius:50px;
-}
-
-/* TABLE */
-
-table{
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin-top:45px;
-}
-
-th,td{
-    padding:22px;
-
-    text-align:left;
-
-    border-bottom:1px solid #ddd;
-}
-
-th{
-    color:#b76e79;
-}
-
-/* TIMELINE */
-
-.timeline-item{
-    background:rgba(255,255,255,0.38);
-
-    backdrop-filter:blur(18px);
-
-    border-left:6px solid #b76e79;
-
-    border-radius:0 24px 24px 0;
-
-    padding:35px;
-
-    margin-bottom:35px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-.timeline-item h3{
-    color:#5b3c42;
-
-    margin-bottom:12px;
-}
-
-.timeline-item p{
-    color:#555;
-
-    line-height:1.9;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-
-    padding:45px;
-
-    color:#666;
 }
 
 /* DARK MODE STYLING */
@@ -470,8 +375,7 @@ footer{
 body.dark-mode nav,
 body.dark-mode .glass-box,
 body.dark-mode .card,
-body.dark-mode .profile-card,
-body.dark-mode .timeline-item{
+body.dark-mode .profile-card{
 
     background:rgba(255,255,255,0.06);
 
@@ -480,22 +384,13 @@ body.dark-mode .timeline-item{
 
 body.dark-mode p,
 body.dark-mode li,
-body.dark-mode td,
 body.dark-mode nav a{
     color:#dddddd;
 }
-body.dark-mode nav a:hover{
-    color:#ff8fb1;
-    text-shadow:0 0 10px rgba(255,143,177,0.7);
-}
-body.dark-mode nav a:hover{
-    color:#ff8fb1;
-    text-shadow:0 0 10px rgba(255,143,177,0.7);
-}
+
 body.dark-mode .hero-text h1,
 body.dark-mode .section-title,
-body.dark-mode .profile-card h3,
-body.dark-mode .timeline-item h3{
+body.dark-mode .profile-card h3{
     color:white;
 }
 
@@ -518,15 +413,12 @@ body.dark-mode .btn-secondary{
 
 nav{
     flex-direction:column;
-
     gap:18px;
 }
 
 nav ul{
     flex-wrap:wrap;
-
     justify-content:center;
-
     gap:20px;
 }
 
@@ -634,377 +526,6 @@ IoT & Secure Systems Enthusiast
 </div>
 
 </div>
-
-<!-- CAREER -->
-
-<section id="career">
-
-<h2 class="section-title">
-Career Exploration
-</h2>
-
-<div class="glass-box">
-
-<p>
-I am interested in pursuing a career as a Security Operations Center (SOC) Analyst.
-A SOC Analyst is responsible for monitoring network activities,
-detecting cyber threats,
-investigating suspicious activities,
-and responding to cybersecurity incidents.
-</p>
-
-<br>
-
-<p>
-This role is highly relevant in modern cybersecurity because organizations today face increasing cyber threats such as ransomware,
-phishing attacks,
-malware,
-and data breaches.
-
-SOC Analysts help organizations maintain system security,
-protect sensitive information,
-and reduce cybersecurity risks.
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-Responsibilities
-</h3>
-
-<p>
-Monitor security alerts,
-analyze suspicious network activities,
-and respond to incidents.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Required Skills
-</h3>
-
-<p>
-Networking,
-Linux administration,
-analytical thinking,
-security monitoring,
-and cybersecurity awareness.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Security Tools
-</h3>
-
-<p>
-Wireshark,
-Kali Linux,
-SIEM platforms,
-Python scripting,
-and monitoring tools.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2 class="section-title">
-Skills Assessment
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-Technical Skills
-</h3>
-
-<ul>
-
-<li>PHP</li>
-<li>JavaScript</li>
-<li>Python</li>
-<li>HTML & CSS</li>
-<li>Laravel 9</li>
-<li>Flutter</li>
-<li>MySQL</li>
-<li>Linux</li>
-<li>Penetration Testing Basics</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>
-Soft Skills
-</h3>
-
-<ul>
-
-<li>Communication</li>
-<li>Leadership</li>
-<li>Teamwork</li>
-<li>Problem Solving</li>
-<li>Adaptability</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="glass-box">
-
-<h3 style="margin-bottom:35px; color:#b76e79;">
-Skill Progress
-</h3>
-
-<div class="skill">
-<p>HTML & CSS</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-<p>Python</p>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-</div>
-
-<div class="skill">
-<p>Networking</p>
-<div class="bar"><div class="fill" style="width:65%"></div></div>
-</div>
-
-<div class="skill">
-<p>Linux</p>
-<div class="bar"><div class="fill" style="width:50%"></div></div>
-</div>
-
-<table>
-
-<tr>
-<th>Industry Requirement</th>
-<th>Current Level</th>
-<th>Improvement Needed</th>
-</tr>
-
-<tr>
-<td>Linux Administration</td>
-<td>Beginner</td>
-<td>Need more practical experience</td>
-</tr>
-
-<tr>
-<td>Cybersecurity Tools</td>
-<td>Basic</td>
-<td>Learn advanced monitoring tools</td>
-</tr>
-
-<tr>
-<td>Programming Skills</td>
-<td>Intermediate</td>
-<td>Improve automation scripting</td>
-</tr>
-
-</table>
-
-</div>
-
-</section>
-
-<!-- DEVELOPMENT -->
-
-<section id="plan">
-
-<h2 class="section-title">
-Career Development Plan
-</h2>
-
-<div class="timeline-item">
-
-<h3>
-2026
-</h3>
-
-<p>
-Improve Linux administration,
-networking knowledge,
-and cybersecurity fundamentals.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-2027
-</h3>
-
-<p>
-Learn Wireshark,
-Kali Linux,
-and improve Python scripting skills.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-2028
-</h3>
-
-<p>
-Complete CCNA certification
-and strengthen cybersecurity technical skills.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-2030
-</h3>
-
-<p>
-Become a professional SOC Analyst
-in a cybersecurity-focused organization.
-</p>
-
-</div>
-
-</section>
-
-<!-- EVIDENCE -->
-
-<section id="evidence">
-
-<h2 class="section-title">
-Evidence of Learning
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-NiagaTrack System
-</h3>
-
-<p>
-Developed a web-based food ordering system
-with structured database integration and workflow optimization.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Smart Temperature Monitoring
-</h3>
-
-<p>
-Built an IoT-based monitoring system using ESP32
-with real-time alert functionality and Blynk integration.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Asyiteru Smart Hotpot System
-</h3>
-
-<p>
-Designed an integrated ordering,
-queue,
-and monitoring system to improve restaurant operational efficiency.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- REFLECTION -->
-
-<section id="reflection">
-
-<h2 class="section-title">
-Personal Reflection
-</h2>
-
-<div class="glass-box">
-
-<p>
-My dream company is Cisco because it is one of the leading companies
-in networking and cybersecurity technologies.
-
-I want to work in an environment that encourages innovation,
-continuous learning,
-and professional growth.
-</p>
-
-<br>
-
-<p>
-I believe I can contribute through my willingness to learn,
-adaptability,
-teamwork abilities,
-and technical background in networking,
-IoT systems,
-and system development projects.
-</p>
-
-<br>
-
-<p>
-My strengths include responsibility,
-commitment,
-leadership experience,
-and eagerness to improve my technical skills continuously.
-
-One of my weaknesses is that I sometimes feel nervous during presentations,
-but I continuously improve my communication skills through academic activities and leadership roles.
-</p>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-Nurul Syahieda • Cybersecurity Portfolio
-</p>
-
-</footer>
-
-<!-- SCRIPT -->
 
 <script>
 
